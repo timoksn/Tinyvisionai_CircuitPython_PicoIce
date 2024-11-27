@@ -150,7 +150,7 @@ class iceprog:
     def start_fpga(self, clk_speed:None):
     
         print(">starting fpga   ")    
-        pwm = pwmio.PWMOut(board.GP1, duty_cycle=2 ** 15, frequency=clk_speed, variable_frequency=False)
+        pwm = pwmio.PWMOut(board.GP24, duty_cycle=2 ** 15, frequency=clk_speed, variable_frequency=False)
         
         try:
             self.ice_done = digitalio.DigitalInOut(board.GP40)
